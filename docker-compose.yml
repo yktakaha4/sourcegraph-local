@@ -7,6 +7,9 @@ services:
       - 7080:7080
       - 2633:2633
       - 443:7443
+    environment:
+      # ディスク容量がこれ以下になるとうまく動かんくなる
+      SRC_REPOS_DESIRED_PERCENT_FREE: 5
     volumes:
       - ./data/sourcegraph/config:/etc/sourcegraph
       - ./data/sourcegraph/data:/var/opt/sourcegraph
