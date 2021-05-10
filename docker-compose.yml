@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  sourcegraph:
+    image: sourcegraph/server:3.27.1
+    ports:
+      - 7080:7080
+      - 2633:2633
+      - 443:7443
+    volumes:
+      - ./data/sourcegraph/config:/etc/sourcegraph
+      - ./data/sourcegraph/data:/var/opt/sourcegraph
