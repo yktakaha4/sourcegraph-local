@@ -1,4 +1,7 @@
 .envrc
-data/**/*
+data/sourcegraph/*
+data/sourcegraph/config/*.crt
+data/sourcegraph/config/*.key
+!data/sourcegraph/config
 
 !.gitkeep
